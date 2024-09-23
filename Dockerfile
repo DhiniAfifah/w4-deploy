@@ -10,7 +10,6 @@ ENV NUXT_STUDENT_NIM ${STUDENT_NIM}
 
 # TODO: code disini
 
-
 WORKDIR /app
 
 COPY package*.json ./
@@ -26,6 +25,6 @@ COPY . .
 
 RUN pnpm run build
 
-EXPOSE 80
+EXPOSE 3000
 
-CMD ["pnpm", "start"]
+CMD ["npm", "run", "dev"]
